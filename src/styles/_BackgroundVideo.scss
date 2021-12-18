@@ -1,3 +1,7 @@
 .bg-video-container {
     @apply w-screen h-screen
 }
+
+.bg-video-container__video {
+    @apply h-screen w-full object-cover absolute top-0 left-0
+}

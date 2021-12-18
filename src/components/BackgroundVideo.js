@@ -5,25 +5,25 @@ const BackgroundVideo = ({ introURL, introLoopURL }) => {
 
   return (
     <div className="bg-video-container">
-      {!loopVideo ? (
+      <video
+        className="bg-video-container__video"
+        src={introURL}
+        autoPlay
+        muted
+        onEnded={() => setLoopVideo(true)}
+      >
+        Intro video
+      </video>
+
+      {loopVideo && (
         <video
-          className="h-screen w-full object-cover"
-          src={introURL}
-          autoPlay
-          muted
-          onEnded={() => setLoopVideo(true)}
-        >
-          Intro video
-        </video>
-      ) : (
-        <video
-          className="h-screen w-full object-cover"
+          className="bg-video-container__video "
           src={introLoopURL}
           autoPlay
           muted
           loop
         >
-          Intro video
+          Intro video Loop
         </video>
       )}
     </div>
