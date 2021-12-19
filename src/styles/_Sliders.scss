@@ -1,0 +1,203 @@
+.slider-btns-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+.slider-btns-container__btns {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slider-btns-container__btn::after {
+    height: 211px;
+    width: 78px;
+    position: absolute;
+    background-repeat: no-repeat;
+    content: "";
+    background: #000;
+    top: 40%;
+
+    transition: all 0.125s ease-out;
+    cursor: pointer;
+
+}
+
+
+.slider-btns-container__btn--right::after {
+    background: url("../assets/slider-next-btn.png");
+    right: 0;
+    transform: translateX(10%);
+}
+
+.slider-btns-container__btn--left::after {
+    background: url("../assets/slider-prev-btn.png");
+    left: 0;
+    transform: translateX(-10%);
+}
+
+.slider-btns-container__btn--right:hover::after,
+.slider-btns-container__btn--left:hover::after {
+    transform: translateX(0%);
+}
+
+.slider-btns-container__dots-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    top: -5%;
+    left: 0;
+    pointer-events: none;
+}
+
+.slider-btns-container__dots {
+    display: flex;
+    width: auto;
+    align-items: center;
+    height: 39px;
+    background: url("../assets/slider_line.png");
+    position: relative;
+    pointer-events: all;
+
+}
+
+.slider-btns-container__dots::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    width: 18px;
+    height: 39px;
+    background: url("../assets/slider_line_start.png") no-repeat;
+    z-index: 100;
+}
+
+.slider-btns-container__dots::after {
+    content: "";
+    width: 18px;
+    height: 39px;
+    position: absolute;
+    right: -18px;
+    background: url("../assets/slider_line_end.png") no-repeat;
+    z-index: 100;
+}
+
+.slider-btns-container__dot {
+    height: 27px;
+    width: 27px;
+    background: url("../assets/slider_dot.png") -21px 2px no-repeat transparent;
+    cursor: pointer;
+    transition: filter 0.2s ease-out;
+}
+
+.slider-btns-container__dot:hover {
+    filter: brightness(1.2);
+    transform: scale(1.125);
+}
+
+.slider-btns-container__dot--active {
+
+    background: url("../assets/slider_dot.png") 2px 2px no-repeat transparent;
+
+}
+
+.slider-container {
+    overflow: hidden;
+    border-top: 8px solid black;
+}
+
+.slider-md-container {
+    position: relative;
+    height: 65vh;
+
+}
+
+.slider-container__slides {
+    display: flex;
+    transition: all 0.75s ease-out;
+    height: 100%;
+}
+
+.slider-container__slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.slider-container__slide__content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-size: 10%;
+}
+
+.slider-container__slide__content__text {
+    // text-align: center;
+    color: #b4b4b2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slider-container__slide__content__text h2 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 3rem;
+}
+
+.slider-container__slide__content__text h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 21px;
+    background: #000;
+    margin: 1rem 0;
+
+    background: url("../assets/separator.png") no-repeat center center;
+}
+
+.slider-container__slide__content__text p {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    width: 55%;
+    text-align: center;
+    font-size: 0.95rem;
+
+}
+
+#slider-universe-01 {
+    background: url("../assets/universe_01_text.png") no-repeat center center;
+}
+
+#slider-universe-02 {
+    background: url("../assets/universe_02_text.png") no-repeat center center;
+
+}
+
+#slider-universe-03 {
+    background: url("../assets/universe_03_text.png") no-repeat center center;
+
+}
+
+.slider-container__slide__text-bg {
+    position: absolute;
+    height: 90%;
+}
+
+.slider-container__slide__bg {
+    height: 100%;
+    width: 100vw;
+    object-fit: cover;
+}
