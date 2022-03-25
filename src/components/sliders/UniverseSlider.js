@@ -1,13 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import SliderBtns from "./SliderBtns";
 
 import Universe_01_Background from "../../assets/universe_01.jpg";
 import Universe_02_Background from "../../assets/universe_02.jpg";
 import Universe_03_Background from "../../assets/universe_03.jpg";
-
-import Universe_01_Text from "../../assets/universe_01_text.png";
-import Universe_02_Text from "../../assets/universe_02_text.png";
-import Universe_03_Text from "../../assets/universe_03_text.png";
 
 const UniverseSlider = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);

@@ -5,8 +5,7 @@ const SliderBtns = ({
   currentSlideIndex,
   setCurrentSlideIndex,
   min,
-  max,
-  interval = 3000,
+  max
 }) => {
   const nextSlide = () => {
     let targetSlide = currentSlideIndex + 1 < max ? currentSlideIndex + 1 : 0;
@@ -40,11 +39,10 @@ const SliderBtns = ({
                 setCurrentSlideIndex(i);
               }}
               key={i}
-              className={`slider-btns-container__dot ${
-                currentSlideIndex === i
-                  ? "slider-btns-container__dot--active"
-                  : ""
-              }`}
+              className={`slider-btns-container__dot ${currentSlideIndex === i
+                ? "slider-btns-container__dot--active"
+                : ""
+                }`}
             ></div>
           ))}
         </div>

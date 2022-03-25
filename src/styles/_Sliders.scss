@@ -2,7 +2,7 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    z-index: 10;
+    z-index: 9;
 }
 
 .slider-btns-container__btns {
@@ -73,7 +73,7 @@
     width: 18px;
     height: 39px;
     background: url("../assets/slider_line_start.png") no-repeat;
-    z-index: 100;
+    z-index: 90;
 }
 
 .slider-btns-container__dots::after {
@@ -83,7 +83,7 @@
     position: absolute;
     right: -18px;
     background: url("../assets/slider_line_end.png") no-repeat;
-    z-index: 100;
+    z-index: 90;
 }
 
 .slider-btns-container__dot {
@@ -110,16 +110,22 @@
     border-top: 8px solid black;
 }
 
+.slider-container__media {
+    width: 100vw;
+    background: url("../assets/bg-carousel-screen.jpg");
+}
+
 .slider-md-container {
     position: relative;
-    height: 65vh;
-
+    height: 100vh;
 }
+
 
 .slider-container__slides {
     display: flex;
     transition: all 0.75s ease-out;
     height: 100%;
+    z-index: 11;
 }
 
 .slider-container__slide {
@@ -127,6 +133,48 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    width: 100vw;
+}
+
+.bg-slide-video {
+    background: url("../assets/bg-video.png") no-repeat;
+    background-size: contain;
+    width: 900px;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.bg-slide-screen {
+    background: url("../assets/bg-screens.png") no-repeat;
+    background-size: contain;
+    width: 900px;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.bg-slide-screen img {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 40px;
+    left: 15px;
+    z-index: 100;
+}
+
+
+#intro-video {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 40px;
+    left: 15px;
+    z-index: 100;
 }
 
 .slider-container__slide__content {

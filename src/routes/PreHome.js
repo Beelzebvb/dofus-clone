@@ -4,6 +4,7 @@ import intro from "../assets/intro.mp4";
 import intro_loop from "../assets/intro_loop.mp4";
 import BottomMenu from "../components/BottomMenu";
 import UniverseSlider from "../components/sliders/UniverseSlider";
+import MediaSlider from "../components/sliders/MediaSlider";
 
 const PreHome = () => {
   return (
@@ -11,6 +12,7 @@ const PreHome = () => {
       <BackgroundVideo introURL={intro} introLoopURL={intro_loop} />
       <BottomMenu />
       <UniverseSlider />
+      <MediaSlider />
     </div>
   );
 };
